@@ -1,13 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather Dashboard</title>
 </head>
+
 <body>
-    
+    <nav class="navbar navbar-dark" style="background-color: #c47bff;">
+        <div class="navbar-brand w-100 text-center">Weather Dashboard</div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="search-header">Search for a City:</div>
+                <div class="input-group mb-4">
+                    <input id="citySearch" type="text" class="form-control" placeholder="Enter city name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <form id="history"></form>
+                <button class="btn btn-primary mb-4" type="button" id="clear-history">Clear History</button>
+            </div>
+            <div class="col-9">
+                <div class="row mr-0">
+                    <div class="col-12 border border-dark m-3"  style="background-color: rgba(255, 255, 255, 0.842);">
+                        <div class="row">
+                            <div class="col-10">
+                                <span id="city-name" class="city-name align-middle"></span>
+                                <img id="weatherImg" src="placeholder" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <p id="temperature"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <p id="humidity"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <p id="wind"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 d-flex">
+                                <p id="UV"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <h2>5-Day Forecast</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col bg-primary text-white ml-3 mb-2 forecast"></div>
+                    <div class="col bg-primary text-white ml-3 mb-2 forecast"></div>
+                    <div class="col bg-primary text-white ml-3 mb-2 forecast"></div>
+                    <div class="col bg-primary text-white ml-3 mb-2 forecast"></div>
+                    <div class="col bg-primary text-white ml-3 mb-2 forecast"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="assets/script.js"></script>
 </body>
-<script src="assets/script.js"></script>
+
 </html>

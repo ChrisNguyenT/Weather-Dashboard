@@ -1,0 +1,31 @@
+.navbar-brand {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(233, 243, 255) , rgb(215, 198, 255));
+}
+
+#clear-history {
+    margin-top: 10px;
+}
+
+.search-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.city-name {
+    font-size: 28px;
+}
+
+.forecast-date {
+    font-size: 18px;
+}
+
+
+
+
